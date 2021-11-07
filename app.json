@@ -1,12 +1,12 @@
 {
-  "name": "TG File Sharing Bot",
+  "name": "File Sharing Bot",
   "description": "file sharing bot store posts and it can access by special links",
   "keywords": [
     "telegram",
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/CodeXBotz/File-Sharing-Bot",
+  "repository": "https://github.com/fhmyngrh/FileShare-Bot",
   "logo": "https://telegra.ph/file/14d3013fda21281c54b61.jpg",
   "env": {
     "TG_BOT_TOKEN": {
@@ -15,7 +15,7 @@
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "1250450587"
+      "value": "2096590179"
     },
     "APP_ID":{
       "description": "your app id, take it from my.telegram.org",
@@ -39,7 +39,7 @@
     },
     "FORCE_SUB_MESSAGE": {
       "description": "Optional: Force Sub message of bot, use HTML parsemode format",
-      "value": "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+      "value": "Halo {first}\n\nAnda harus bergabung di Channel atau Grup untuk menggunakan Bot Ini.\nSilakan bergabung terlebih dahulu dan coba lagi."
     },
     "ADMINS": {
       "description": "A space separated list of user_ids of Admins, they can only create links",
