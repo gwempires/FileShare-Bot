@@ -146,13 +146,9 @@ async def not_joined(client: Client, message: Message):
 @Bot.on_message(filters.command('users') & filters.private & filters.user(ADMINS))
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
+    link = await self.export_chat_invite_link(CHANNEL_ID)
     users = await full_userbase()
-    await msg.edit(f"{len(users)} users are using this bot")
-    
-@Bot.on_message(filters.command('database') & filters.private & filters.user(ADMINS))
-async def get_database(client: Bot, message: Message):
-    link =await self.export_chat_invite_link(CHANNEL_ID)
-    msg = await client.send_message(chat_id=message.chat.id, text=f"Database Channel : {link}")
+    await msg.edit(f"{len(users)} users are using this bot.\nDatabase URL : {link}")
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
