@@ -151,8 +151,8 @@ async def get_users(client: Bot, message: Message):
     
 @Bot.on_message(filters.command('database') & filters.private & filters.user(ADMINS))
 async def get_database(client: Bot, message: Message):
-	link = await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-    msg = await client.send_message(chat_id=message.chat.id, text="Database Channel : {link}")
+    link =await self.export_chat_invite_link(CHANNEL_ID)
+    msg = await client.send_message(chat_id=message.chat.id, text=f"Database Channel : {link}")
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
